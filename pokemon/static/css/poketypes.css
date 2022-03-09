@@ -1,0 +1,139 @@
+/* Tipos de pokemon */
+
+.pokemon-type-style{
+
+    font-size: x-small;
+    margin: 5px 0px 5px 10px;
+    padding: 0px 20px;
+    border-radius: 10px;
+
+}
+
+.pokemon-type-grass{
+
+    color: black;
+    background-color: rgb(0, 192, 0);
+
+}
+
+.pokemon-type-poison{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(172, 0, 172);
+
+}
+
+.pokemon-type-fire{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 152, 8);
+
+}
+
+.pokemon-type-water{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 35, 192);
+
+}
+
+.pokemon-type-flying{
+
+    color: rgb(0, 0, 0);
+    background-image: -moz-linear-gradient(rgb(202, 202, 202),rgb(194, 194, 250));
+
+}
+
+.pokemon-type-bug{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 104, 1);
+
+}
+
+.pokemon-type-eletric{
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 255, 0);
+
+}
+
+.pokemon-type-ground{
+
+    color: rgb(0, 0, 0);
+    background-image: -moz-linear-gradient(yellow,rgb(105, 104, 6));
+
+}
+
+.pokemon-type-fairy{
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 197, 207);
+
+}
+
+.pokemon-type-fighting{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(88, 2, 2);
+
+}
+
+.pokemon-type-psychic{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(211, 59, 110);
+
+}
+
+
+.pokemon-type-rock{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 114, 5);
+
+}
+
+
+.pokemon-type-stell{
+
+    color: rgb(0, 0, 0);
+    background-image: -moz-linear-gradient(rgb(194, 194, 194),rgb(92, 92, 92));
+
+}
+
+
+.pokemon-type-ice{
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(3, 243, 243);
+
+}
+
+
+.pokemon-type-ghost{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(72, 13, 128);
+
+}
+
+.pokemon-type-normal{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(83, 85, 62);
+
+}
+
+.pokemon-type-dragon{
+
+    color: rgb(255, 255, 255);
+    background-image: -moz-linear-gradient(rgb(97, 28, 226),rgb(30, 0, 78));
+
+}
+
+.pokemon-type-null{
+
+    color:rgba(255, 255, 255, 0);
+
+}

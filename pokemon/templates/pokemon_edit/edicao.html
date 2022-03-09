@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_edit.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon1.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');</style> 
+    <title>Edição Pokemon</title>
+</head>
+<body>
+    <header><strong>Editar Pokemon</strong></header>
+    <section>
+    {% block content%}  
+    <div class="flex-container">
+        <div class="form">
+        <form action="" method="POST" enctype= "multipart/form-data">
+            {% csrf_token %}
+            <p>
+                <label for="pokemon-number">Número: </label>
+                <input type="text" name="pokemon-number" class="pokemonID" value="{{num}}" required oninput ="renderCard()">
+            </p>
+            <p>
+                <label for="pokemon-name">Nome: </label>
+                <input type="text" name="pokemon-name" class="pokemonName" value="{{nome}}"required oninput ="renderCard()">
+            </p>
+            <p>
+                <label for="pokemon-image">Imagem: </label>
+                <input type="file" name="pokemon-url" class="pokemonUrl" oninput ="previewFile()">
+            </p>
+            <p class="pokemom-form-type">Tipos:</p>
+                <div class="lista-tipos">
+                    <!-- Todos os tipos -->
+                </div>
+                <button type="submit" class="button-submit" value="submit" onclick="Enviar()">Editar</button>
+                <button type="button" class="button-back"><a href="/listar" class="link-button">voltar</a></button>
+        </form>
+        </div>
+        <div class="pokemon-card-box">
+            <div id="div-card">
+                <!-- delete -->
+                <form action="" method="POST" enctype= "multipart/form-data">
+                {% csrf_token %}
+                    <button title = "Deletar Pokemon" type="submit" name="delete-poke" class="delete-poke">
+                    <i id="fafa" class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="pokemon-card">
+                <div><img src ="../../static/imagens/{{image_name}}" class="pokemon-imagem"></div>
+                <div class="description">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <input type="hidden" name="tipos" class="tipos" value="{{tipo1}} {{tipo2}}">
+    </section>
+    <footer>Criada por Harrisu</footer>
+    <script src= "{% static 'javascript/renderPokecard.js' %}"></script>
+    <script src= "{% static 'javascript/pokecardEdit.js' %}"></script>
+</body>
+</html>

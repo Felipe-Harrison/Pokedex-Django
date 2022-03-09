@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_cad.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon1.ico' %}" type="image/x-icon">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');</style> 
+    <title>Cadastro Pokemon</title>
+</head>
+<body>
+    <header><strong>Cadastrar Pokemon</strong></header>
+    <section>
+    {% block content%}  
+    <div class="flex-container">
+        <div class="form">
+            <form action="" method="POST" enctype= "multipart/form-data">
+                {% csrf_token %}
+                <p>
+                    <label for="pokemon-number">Número: </label>
+                    <input type="text" name="pokemon-number" class="pokemonID" required oninput ="renderCard()">
+                </p>
+                <p>
+                    <label for="pokemon-name">Nome: </label>
+                    <input type="text" name="pokemon-name" class="pokemonName" required oninput ="renderCard()">
+                </p>
+                <p>
+                    <label for="pokemon-image">Imagem: </label>
+                    <input type="file" name="pokemon-url" class="pokemonUrl" required oninput ="previewFile()">
+                </p>
+                <p class="pokemom-form-type">Tipos:</p>
+                    <div class="lista-tipos">
+                        <!-- Todos os tipos -->
+                    </div>
+                    <button type="submit" class="button-submit" value="submit" onclick="Enviar()">Cadastrar</button>
+                    <button type="button" class="button-back"><a href="/listar" class="link-button">voltar</a></button>
+            </form>  
+        </div>
+        <div class="pokemon-card">
+            <div><img src ="" class="pokemon-imagem"></div>
+            <div class="description">
+                <!-- Descrição -->
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    </section>
+    <footer>Criada por Harrisu</footer>
+    <script src= "{% static 'javascript/renderPokecard.js' %}"></script>
+</body>
+</html>
