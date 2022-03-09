@@ -1,0 +1,284 @@
+@import url("./poketypes.css");
+
+/* Listagem */
+
+*{
+    font-family: 'Poppins',sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+
+    background-color: rgb(43, 43, 43);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    min-width: 210px;
+}
+
+header{
+
+    font-size: large;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    background-color: black;
+    padding: 15px;
+    
+}
+
+footer{
+
+    color: white;
+    background-color: rgb(46, 46, 46);
+    text-align: center;
+    padding: 10px;
+
+}
+
+section{
+
+    min-height: max-content;
+    background-color: rgb(247, 247, 247);
+    background: repeating-linear-gradient( 45deg, #eee, #eee 5px, rgb(247, 247, 247) 5px, rgb(247, 247, 247) 25px );
+    justify-content: center;
+    padding: 10px 80px 50px;
+
+}
+
+.flex-container{
+
+    display: flex;
+    background-color: rgba(247, 247, 247, 0.5);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    /* 
+    flex-direction: row;    Como vai ser organizado os elementos
+    flex-wrap: wrap;    Quebra de linha 
+    flex-flow = flex-direction flex-wrap ; 
+    */
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* Organizar eixo princiapl na flexbox */
+}
+
+/* card dos pokemon */
+
+.pokemon-card-box{
+    transition: .5s ease all;
+    margin: 10px 10px;  
+}
+
+@keyframes up-down {
+    from{
+        top: 0px;
+    }
+    50%{
+        top: -3px;
+    }
+    to{
+        top: 0px;
+    }   
+}
+
+
+.pokemon-card-comun{
+
+    position: relative;
+    min-width: 210px;
+    min-height: 330px;
+    /* margin: 10px 20px 10px 20px; */
+    background-color:rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.pokemon-card-comun:hover{
+   
+    animation: up-down 500ms normal;
+
+}
+
+.pokemon-imagem-comun{
+
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+
+    background-color: rgb(227, 227, 227);
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: 10px;
+    border: 1px groove rgb(230, 230, 230);
+    
+}
+
+.description{
+
+    background-color: white;
+    margin: 5px;
+    font-family: 'Poppins',sans-serif;
+    min-height: 95px;
+
+    border: 1px groove rgb(230, 230, 230);
+    border-radius: 7px;
+
+}
+
+.pokemon-id{
+
+    color:black;
+    font-size: small;
+    margin-left: 10px;
+
+}
+
+.pokemon-name{
+
+    color: black;
+    margin: 0px 0px 5px 10px;
+    font-size: 20px;
+}
+
+/* Pokemon lendário */
+
+.pokemon-card-lendario{
+    position: relative;
+    min-width: 210px;
+    min-height: 330px;
+    /* margin: 10px 20px 10px 20px; */
+
+    animation: bling-bling 3s ease infinite;
+    background: linear-gradient(-45deg, rgb(227, 227, 227), rgb(206, 215, 231), rgb(212, 226, 228),rgb(210, 219, 235),rgb(227, 227, 227));
+    background-size: 400% 400%;
+
+    border-radius: 10px;
+
+}
+
+@keyframes bling-bling {
+    from{
+        background-position: 0% 50%;      
+    }
+    50%{
+        background-position: 50% 100%;    
+    }
+    75%{
+        background-position: 100% 50%;  
+    }  
+    100%{
+        background-position: 50% 0%;  
+    } 
+}
+
+.pokemon-card-lendario:hover{
+   
+    animation: up-down 500ms normal;
+    
+}
+
+.pokemon-imagem-lendario{
+
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+
+    background-color: rgba(227, 227, 227, 0.199);
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: 10px;
+    border: 1px groove rgb(230, 230, 230);
+    
+}
+
+/* Card Antigo v1 */
+.pokemon-card-old{
+
+    position: relative;
+    min-width: 210px;
+    min-height: 330px;
+    background-color:rgb(230, 230, 230);
+}
+
+.pokemon-card-old:hover{
+   
+    animation: up-down 500ms normal;
+
+}
+
+.pokemon-imagem-old{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 5px;
+    /* background-color: rgb(230, 230, 230); */
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* Responsive screen */
+
+/* 200px - 408px 1 poke sem fundo*/
+@media all and (min-width: 200px) {
+    .flex-container{
+        background-color: rgba(240, 248, 255, 0);
+        justify-content: center;
+    }
+}
+/* 408px - 460px  1 poke create fundo*/
+@media all and (min-width: 408px) {
+    .flex-container{
+        background-color: rgba(247, 247, 247, 0.7);
+        justify-content: flex-start;
+    }
+}
+/* 460px - 641px  1 poke center*/
+@media all and (min-width: 460px) {
+    .flex-container{
+        justify-content: center;
+    }
+}
+/* 641px -  871px  2 poke center*/
+@media all and (min-width: 641px) {
+    .flex-container{
+        justify-content: center;
+    }
+}
+/* 871px - 925px  3poke*/
+@media all and (min-width: 871px) {
+
+    .flex-container{
+        justify-content: flex-start;
+    }
+}
+/* 925px - 1105px  3poke center*/
+@media all and (min-width: 925px) {
+
+    .flex-container{
+        justify-content: center;
+    }
+}
+/* 1105px - 1180px 4poke*/
+@media all and (min-width: 1105px) {
+
+    .flex-container{
+        justify-content: flex-start;
+    }
+}
+/* 1180px - 1340px 4poke center*/
+@media all and (min-width: 1180px) {
+
+    .flex-container{
+        justify-content: center;
+    }
+}
+/* 1340px + 5+poke */
+@media all and (min-width: 1340px) {
+    .flex-container{
+        justify-content: flex-start;
+    }
+}
