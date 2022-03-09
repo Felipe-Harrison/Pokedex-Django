@@ -9,23 +9,33 @@ Objetivo de praticar Django e criação de website
 
 # Como utilizar na sua maquina:
 
-1 - Realizar a clonagem do repositório
+1 - Realizar a clonagem do repositório:
 
 https:
-
+```shell
+cd "diretorio de sua preferencia"
 git clone https://github.com/Felipe-Harrison/Pokedex-Django
-
+```
 2 - navegue com o cmd ate a pasta, onde o repositório esta salvo
 
+```shell
+cd "diretorio de sua preferencia"
+```
 3 - Certificando que tenha python instalado em sua maquina, realize o comando
 
+```shell
 pip install django
+```
 
 4 - finalizado o processo de instalação, dentro da pasta, execute pelo cmd o seguinte comando:
 
+```shell
+cd "diretorio de sua preferencia"
 python manage.py runserver
+```
 
-5 - Um link será gerado, podendo ser acessado pelo seu navegador
+5 - Um link será gerado, podendo ser acessado pelo seu navegador;
+
 
 # Pagínas do Site:
 
@@ -40,6 +50,5 @@ Cadastro:
 Edição e Exclusão:
 
 ![image](https://user-images.githubusercontent.com/76136248/157353709-a794243f-944a-4ad3-b6d9-16c065ba8971.png)
-
 
 
