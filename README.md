@@ -19,7 +19,7 @@ git clone https://github.com/Felipe-Harrison/Pokedex-Django
 2 - navegue com o cmd ate a pasta, onde o repositório esta salvo
 
 ```shell
-cd Pokedex-Django
+cd "diretorio de sua preferencia"
 ```
 3 - Certificando que tenha python instalado em sua maquina, realize o comando
 
@@ -30,7 +30,7 @@ pip install django
 4 - finalizado o processo de instalação, dentro da pasta, execute pelo cmd o seguinte comando:
 
 ```shell
-cd "diretorio de sua preferencia"
+cd Pokedex-Django
 python manage.py runserver
 ```
 
