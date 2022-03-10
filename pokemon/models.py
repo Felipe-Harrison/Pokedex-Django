@@ -13,6 +13,7 @@ class pokemon(models.Model):
     # Colocar como nome do objeto o campo name
     def __str__(self):
         return self.name
+    # ordenando os objetos pelo numero
+    class Meta:
+        ordering = ['number']
 
-class Meta:
-    ordering = ('number',)
