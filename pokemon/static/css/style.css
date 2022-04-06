@@ -1,4 +1,5 @@
 @import url("./poketypes.css");
+@import url("./stylenavbar.css");
 
 /* Listagem */
 
@@ -19,7 +20,7 @@ body{
 }
 
 header{
-
+    
     font-size: large;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -63,6 +64,37 @@ section{
     justify-content: flex-start;  /* Organizar eixo princiapl na flexbox */
 }
 
+/* 
+.cadastro-icon{
+    display: flex;
+    justify-content: center;
+    margin: 2px 0px;
+    color: rgba(255, 255, 255, 0.904);
+}
+.cadastro-icon:visited{
+    color: rgba(255, 255, 255, 0.904);
+}
+.pokemon-cadastra-button{
+    position: fixed;
+    justify-content: center;
+    right: 30px;
+    bottom: 10px;
+
+    background-color: #000;
+    height: 35px;
+    width: 35px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.pokemon-cadastra-button:hover{
+    animation: up-down-icon 500ms normal;
+}
+@keyframes up-down-icon {
+    from{bottom: 10px;}
+    50%{bottom: 13px;}
+    to{bottom: 10px;}   
+} */
 /* card dos pokemon */
 
 .pokemon-card-box{

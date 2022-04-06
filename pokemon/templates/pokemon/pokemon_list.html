@@ -8,11 +8,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'favicon1.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');</style> 
     <title>Pokédex</title>
 </head>
 <body>
-    <header><strong>Minha Pokedex</strong></header>
+    <header>
+        <span class="header-navbar" >
+            <ul>
+                <li>
+                    <span class="navbar-icon">
+                        <i class="fa fa-align-justify" aria-hidden="true"></i>
+                    </span>
+                </li>
+                <li>
+                    <div class="navbar-icon-link-box">
+                        <a class="navbar-link" href="/cadastrar"> 
+                            <span class="navbar-icon">
+                                <i class="fa fa-plus-square fa-1x" aria-hidden="true"></i>
+                            </span>
+                            <span class="navbar-icon-text">Cadastrar</div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="navbar-icon-link-box">
+                        <a class="navbar-link" href="/admin"> 
+                            <span class="navbar-icon">
+                                <i class="fa fa-user-secret fa-1x" aria-hidden="true"></i>
+                            </span>
+                            <span class="navbar-icon-text">Administração</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </span>
+        <strong>Minha Pokedex</strong>
+    </header>
     <section>
         <div class="flex-container">
         {% block content %}
@@ -51,6 +83,11 @@
             </div>
         </div>
     </section>
+    <!-- <div class="pokemon-cadastra-button">
+        <a class ="cadastro-icon" href="/cadastrar"> 
+            <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+        </a>
+    </div> -->
     <footer>Criada por Harrisu</footer>
 </body>
 </html>
