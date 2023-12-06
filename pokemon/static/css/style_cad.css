@@ -15,16 +15,20 @@ body{
 
     background-color: rgb(43, 43, 43);
     color: rgb(0, 0, 0);
-    align-items: center;
-
+    height: 100vh;
+    margin: 0;
 }
+
 header{
 
+    position: sticky;
+    top: 0; z-index: 5;
     font-size: large;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: black;
-    padding: 15px;
+    padding: 1vh;
+    height: 4vh;
     
 }
 footer{
@@ -32,34 +36,52 @@ footer{
     color: white;
     background-color: rgb(46, 46, 46);
     text-align: center;
-    padding: 10px;
+    padding: 1vh;
+    height: 4vh;
 }
 
 section{
 
-    min-height: max-content;
+    position: relative;
+    min-height: 88vh; height: fit-content;
     background-color: rgb(247, 247, 247);
     background: repeating-linear-gradient( 45deg, #eee, #eee 5px, rgb(247, 247, 247) 5px, rgb(247, 247, 247) 25px );
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 50px 150px 55px 150px;
 
 }
 
 .flex-container{
 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    animation-duration: 1000ms;
+
     border: 1px solid rgb(216, 216, 216);
     border-radius: 10px;
     background-color: rgb(247, 247, 247,0.5);
+    height: 100%;
+    padding: 70px 20px; margin: 20px;
+    width: 80%;
 }
+
 /* Formulario */
 
 .form{
-    margin: 15px 20px;
     background-color: rgb(235, 235, 235);
     padding: 10px;
     border-radius: 10px;
     border: 1px inset rgb(247, 247, 247);
+    min-width: 50%;
     
+}
+
+.form > form > button:hover , .form > form > input[type="checkbox"]:hover {
+    cursor: pointer;
 }
 .pokemonName,.pokemonID{
     border: 1px solid black;
@@ -89,21 +111,21 @@ li{
     max-inline-size: 400px;
 
 }
-.flex-container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    animation-duration: 1000ms;
-}
 
-.button-submit,.button-back{
+.button-submit{
     margin-top: 10px;
     border: 1px groove rgb(80, 80, 80);
     border-radius: 10px;
+    font-size: medium;
+    transition-duration: 500ms;
+}
+.button-submit:hover {
+    background-color: #a7a7a7;
+    color: black;
 }
 
-.button-submit:hover{
-    transition-duration: 1s;
+.link-button {
+    padding: 3px 5px;
 }
 
 /* Card do pokemon */
@@ -113,7 +135,6 @@ li{
     position: relative;
     min-width: 210px;
     height: 350px;
-    margin: 10px 20px 10px;
     background-color:rgb(230, 230, 230);
     /* background-color:rgb(206, 91, 91); */
     border-radius: 10px;
@@ -122,6 +143,7 @@ li{
 
 }
 .pokemon-card-box{
+    position: relative;
     margin-top: 5px
 }
 
@@ -145,6 +167,7 @@ li{
 .pokemon-imagem{
 
     width: 200px;
+    min-height: 200px;
     height: 200px;
     border-radius: 10px;
     margin: 5px;
@@ -177,32 +200,4 @@ li{
     color: black;
     margin: 0px 0px 5px 10px;
     font-size: 20px;
-}
-
-/* Responsive screen */
-
-@media all and (min-width: 200px){
-    section{
-        padding: 50px 35px 55px;
-    }
-}
-@media all and (min-width: 510px){
-    section{
-        padding: 50px 100px 55px;
-    }
-}
-@media all and (min-width: 767px){
-    section{
-        padding: 50px 35px 55px;
-    }
-}
-@media all and (min-width: 837px){
-    section{
-        padding: 50px 70px 55px;
-    }
-}
-@media all and (min-width: 997px){
-    section{
-        padding: 50px 150px 55px;
-    }
 }

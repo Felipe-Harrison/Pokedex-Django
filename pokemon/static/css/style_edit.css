@@ -15,7 +15,10 @@
 }
 
 .delete-poke{
+    cursor: pointer;
     position: absolute;
+    top: 0; right: -10px;
+    transform: translateY(-50%);
     z-index: 1;
     border: 1px groove gray; 
     background-color: rgb(229, 186, 186);

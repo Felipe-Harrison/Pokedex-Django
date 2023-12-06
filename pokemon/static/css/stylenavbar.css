@@ -1,59 +1,58 @@
+.navbarBtn {
+    position: absolute;
+    left: 10px;
+    width: 5vw;
+}
 .header-navbar{
     position: absolute;
-    left: 40px;
-    top: 10px;  
+    left: 10px; top: 6vh;
+    width: fit-content; height: 0;
+    padding: 0 20px 0 15px;
 
-    background-color: #000;
-    padding: 0px 5px;
-    width: fit-content;
-    height: 40px;
-    border-radius: 10px;
+    background-color: black;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 
     overflow-y: hidden;
     transition: height 500ms;
-    z-index: 1;
-}
-.header-navbar:hover{
-    height: 160px; /*50px * num-menu + 10px*/
+    z-index: 1;   
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
-ul{
-    list-style: none;
-    margin-top: 7px;
-    padding: 0px;
+.navbarBtn:hover ~ .header-navbar, .header-navbar:hover{
+    height: 15vh;
 }
-li{ 
-    text-align: left;
-    padding: 10px 10px 0px;
-}
-.navbar-icon{
-    margin-top: 0px;
-}
-.navbar-icon-text{
-    margin-left: 10px;
+
+.header-navbar > ul {
+    margin: 0; padding: 0;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
 }
 
 .navbar-icon-link-box{
-    text-align: left;
-
+    list-style: none;
     height: 30px;
-    width: 25px;
-    margin-top: 11px;
-
-    box-shadow: 5px 0 0 #fff;
-    overflow-x: hidden;
-    transition: width 1s; 
-}
-.navbar-icon-link-box:hover{
     width: 160px;
 }
+.navbar-link:hover{
+    color: rgb(122, 122, 122)
+}
 
-.navbar-link,.navbar-link:visited{
+.navbar-icon{
+    margin: 0 7px;
+}
+
+.navbar-link{
     position: relative;
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: #fff;
+    transition-duration: 500ms;
+    color: white;
 }
 
 

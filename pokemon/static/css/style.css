@@ -13,21 +13,23 @@ a{
 
 body{
 
+    margin: 0;
     background-color: rgb(43, 43, 43);
     color: rgb(0, 0, 0);
-    align-items: center;
     min-width: 210px;
 }
 
 header{
     
+    position: sticky;
+    top: 0px;
     font-size: large;
     color: rgb(255, 255, 255);
     text-align: center;
 
     background-color: black;
     padding: 15px;
-    
+    z-index: 5;
 }
 
 footer{
@@ -51,7 +53,6 @@ section{
 
 .flex-container{
 
-    display: flex;
     background-color: rgba(247, 247, 247, 0.5);
     border: 1px solid rgb(216, 216, 216);
     border-radius: 10px;
@@ -60,8 +61,10 @@ section{
     flex-wrap: wrap;    Quebra de linha 
     flex-flow = flex-direction flex-wrap ; 
     */
+    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;  /* Organizar eixo princiapl na flexbox */
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* 
@@ -95,6 +98,7 @@ section{
     50%{bottom: 13px;}
     to{bottom: 10px;}   
 } */
+
 /* card dos pokemon */
 
 .pokemon-card-box{
@@ -112,6 +116,10 @@ section{
     to{
         top: 0px;
     }   
+}
+
+.card-new-poke {
+    align-self: flex-start;
 }
 
 
@@ -250,67 +258,4 @@ section{
     background-size: cover;
     background-position: center;
     
-}
-
-/* Responsive screen */
-
-/* 200px - 408px 1 poke sem fundo*/
-@media all and (min-width: 200px) {
-    .flex-container{
-        background-color: rgba(240, 248, 255, 0);
-        justify-content: center;
-    }
-}
-/* 408px - 460px  1 poke create fundo*/
-@media all and (min-width: 408px) {
-    .flex-container{
-        background-color: rgba(247, 247, 247, 0.7);
-        justify-content: flex-start;
-    }
-}
-/* 460px - 641px  1 poke center*/
-@media all and (min-width: 460px) {
-    .flex-container{
-        justify-content: center;
-    }
-}
-/* 641px -  871px  2 poke center*/
-@media all and (min-width: 641px) {
-    .flex-container{
-        justify-content: center;
-    }
-}
-/* 871px - 925px  3poke*/
-@media all and (min-width: 871px) {
-
-    .flex-container{
-        justify-content: flex-start;
-    }
-}
-/* 925px - 1105px  3poke center*/
-@media all and (min-width: 925px) {
-
-    .flex-container{
-        justify-content: center;
-    }
-}
-/* 1105px - 1180px 4poke*/
-@media all and (min-width: 1105px) {
-
-    .flex-container{
-        justify-content: flex-start;
-    }
-}
-/* 1180px - 1340px 4poke center*/
-@media all and (min-width: 1180px) {
-
-    .flex-container{
-        justify-content: center;
-    }
-}
-/* 1340px + 5+poke */
-@media all and (min-width: 1340px) {
-    .flex-container{
-        justify-content: flex-start;
-    }
 }
